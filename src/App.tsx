@@ -1,11 +1,15 @@
-import Heading from "./Heading";
+import { useState } from "react";
+
 function App() {
+  const [count, setCount] = useState(0);
+
+  const clickHandler = () => {
+    setCount(count + 1);
+  };
   return (
     <div>
-      <h2 className="title">I am container</h2>
-      <p>hello world</p>
-      <Heading />
-      <Heading />
+      <button onClick={clickHandler}>Increment</button>
+      <p>{count}</p>
     </div>
   );
 }
