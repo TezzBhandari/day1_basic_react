@@ -1,16 +1,22 @@
-import { useState } from "react";
+import Avatar, { Person } from "./components/Avatar";
+import Profile from "./components/Profile";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const clickHandler = () => {
-    setCount(count + 1);
+  const sam: Person = {
+    name: "sam",
+    profile: "https://i.imgur.com/1bX5QH6.jpg",
   };
+
+  const rita: Person = {
+    name: "rita",
+    profile: "https://i.imgur.com/OKS67lh.jpg",
+  };
+
   return (
-    <div>
-      <button onClick={clickHandler}>Increment</button>
-      <p>{count}</p>
-    </div>
+    <>
+      <Profile imageUrl="https://i.imgur.com/1bX5QH6.jpg"  size={50}/>
+      <Profile imageUrl="https://i.imgur.com/OKS67lh.jpg" size={100} />
+    </>
   );
 }
 

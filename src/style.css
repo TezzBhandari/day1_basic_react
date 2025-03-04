@@ -1,3 +1,7 @@
 .title {
   color: red;
 }
+
+.avatar {
+  border-radius: 50%;
+}
